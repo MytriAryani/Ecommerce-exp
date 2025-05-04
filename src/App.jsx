@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Herosection />
+     
       <div className='main'>
         <TopBarOptions/>
       </div>
