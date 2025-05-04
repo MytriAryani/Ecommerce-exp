@@ -33,7 +33,7 @@ const Header = () => {
           LOGO
         </div>
         <div className="header-right">
-          <img src={searchIcon} alt="Search" className="header-icon" />
+          <img src={searchIcon} alt="Search" className="header-icon"  />
           <img src={heartIcon} alt="Heart" className="header-icon" />
           <img src={profileIcon} alt="Profile" className="header-icon" />
           <img src={bagIcon} alt="Cart" className="header-icon" />
@@ -46,11 +46,11 @@ const Header = () => {
       {/* Navigation Bar */}
       <nav className="nav-bar">
         <ul>
-          <li>SHOP</li>
-          <li>SKILLS</li>
-          <li>STORIES</li>
-          <li>ABOUT</li>
-          <li>CONTACT US</li>
+          <li className="hover-underline">SHOP</li>
+          <li className="hover-underline">SKILLS</li>
+          <li className="hover-underline">STORIES</li>
+          <li className="hover-underline">ABOUT</li>
+          <li className="hover-underline">CONTACT US</li>
         </ul>
       </nav>
     </>
