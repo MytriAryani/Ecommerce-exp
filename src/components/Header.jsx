@@ -13,18 +13,24 @@ const Header = () => {
     <>
       {/* Top Notification Bar */}
       <div className="top-bar">
-        <div className="top-message">🔔 Lorem ipsum dolor</div>
-        <div className="top-message">🔔 Lorem ipsum dolor</div>
-        <div className="top-message">🔔 Lorem ipsum dolor</div>
+        <div className="top-message">
+            <img src={logoIcon} alt="Icon Logo" className="icon-logo" />
+            <p>Lorem ipsum dolor</p></div>
+        <div className="top-message"> <img src={logoIcon} alt="Icon Logo" className="icon-logo" />
+        <p>Lorem ipsum dolor</p></div>
+        <div className="top-message">
+        <img src={logoIcon} alt="Icon Logo" className="icon-logo" />
+        <p>Lorem ipsum dolor</p>
+        </div>
       </div>
 
       {/* Main Header */}
       <header className="main-header">
         <div className="header-left">
-          <img src={logoIcon} alt="Icon Logo" className="icon-logo" />
+        <img src={mainLogo} alt="Main Logo" className="main-logo" />
         </div>
         <div className="header-center">
-          <img src={mainLogo} alt="Main Logo" className="main-logo" />
+          LOGO
         </div>
         <div className="header-right">
           <img src={searchIcon} alt="Search" className="header-icon" />

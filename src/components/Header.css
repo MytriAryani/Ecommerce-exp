@@ -27,12 +27,13 @@ body {
     align-items: center;
     padding: 18px 40px;
     background-color: #fff;
-    border-bottom: 1px solid #eee;
+   
   }
   
   .icon-logo {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
   }
   
   .main-logo {
@@ -81,8 +82,15 @@ body {
   
   .nav-bar li {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     letter-spacing: 0.5px;
+  }
+  .header-center{
+    width: 107px;
+    height:44px;
+    font-size: 36px;
+    font-weight: 800;
+    padding-left:170px;
   }
   
