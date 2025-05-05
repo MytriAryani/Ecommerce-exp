@@ -3,6 +3,7 @@ import Header from './components/Header';
 import './App.css';
 import Herosection from './components/Herosection.jsx';
 import TopBarOptions from './components/TopBarOptions.jsx';
+import Footer from './components/footer.jsx';
 
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
       <div className='main'>
         <TopBarOptions/>
       </div>
+      <Footer/>
     </div>
+    
+
   );
 }
 
