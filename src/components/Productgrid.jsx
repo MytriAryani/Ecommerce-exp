@@ -10,7 +10,7 @@ const ProductGrid = ({ selectedCategories, selectedSort }) => {
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
       .then((data) => {
-        const enriched = data.map((product, i) => ({
+        const enriched = data.map((product) => ({
           ...product,
           liked: false,
         }));
@@ -39,7 +39,7 @@ const ProductGrid = ({ selectedCategories, selectedSort }) => {
       case "Newest First":
         return b.id - a.id;
       case "Popular":
-        return a.rating?.count < b.rating?.count ? 1 : -1;
+        return b.rating?.count - a.rating?.count;
       default:
         return 0;
     }
@@ -54,9 +54,7 @@ const ProductGrid = ({ selectedCategories, selectedSort }) => {
           </div>
           <div className="product-details">
             <p className="title">{product.title}</p>
-            <p className="subtext">
-              <a href="/signin">Sign in</a> or Create an account to see pricing
-            </p>
+            <p className="price">${product.price.toFixed(2)}</p>
           </div>
           <img
             src={product.liked ? heartFilled : heartOutline}
