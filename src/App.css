@@ -3,13 +3,18 @@
     margin: 0 auto;
     padding: 0 6rem;
   }
-  
-  /* This makes FilterAside and ProductGrid sit side-by-side */
+ 
   .main-section {
     display: flex;
-    gap: 2rem;
+    flex-direction: row; /* this is critical */
     align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px; /* spacing between filter and products */
+    padding: 20px;
   }
+  
+  
+
   
   /* Optional: fix sidebar and grid widths */
   .main-section > *:first-child {

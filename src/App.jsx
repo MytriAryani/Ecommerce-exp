@@ -1,31 +1,23 @@
-import React from 'react';
-import Header from './components/Header';
-import './App.css';
-import Herosection from './components/Herosection.jsx';
-import TopBarOptions from './components/TopBarOptions.jsx';
-import Footer from './components/footer.jsx';
-import FilterAside from './components/FilterAside.jsx';
-import ProductGrid from './components/Productgrid.jsx';
-
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Signup from "./components/Signup.jsx";
+import Login from "./components/Login.jsx";
+import Home from "./components/home.jsx";
+import "./App.css"; // Import your CSS file here
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Herosection />
-     
-      <div className='main'>
-        <TopBarOptions/>
-        <div className='main-section'>
-          <FilterAside/>
-          <ProductGrid/>
-        </div>
-      </div>
-      <Footer/>
-    </div>
-    
+  // ✅ Define this inside the component function
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
 
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/signup" />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
 }
 
