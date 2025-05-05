@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './ProductGrid.css';
-import heartFilled from '../assets/heartfilled.svg';   // Filled heart icon
-import heartOutline from '../assets/heart.png';  // Empty heart icon
+import heartFilled from '../assets/heartfilled.svg';
+import heartOutline from '../assets/heart.png';
 
-const ProductGrid = () => {
+const ProductGrid = ({ selectedCategories }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,6 @@ const ProductGrid = () => {
   }, []);
 
   const toggleLike = (index) => {
-    console.log('Toggling like for product', index);
     setProducts((prev) =>
       prev.map((product, i) =>
         i === index ? { ...product, liked: !product.liked } : product
@@ -29,12 +28,15 @@ const ProductGrid = () => {
     );
   };
 
+  const filteredProducts = selectedCategories.length === 0
+    ? products
+    : products.filter(p => selectedCategories.includes(p.category));
+
   return (
     <section className="product-grid">
-      {products.map((product, index) => (
+      {filteredProducts.map((product, index) => (
         <div key={index} className={`product-card ${product.outOfStock ? 'out-of-stock' : ''}`}>
           {product.new && <span className="badge new">NEW PRODUCT</span>}
-          
           {product.outOfStock && <span className="badge out-of-stock">OUT OF STOCK</span>}
 
           <div className="image-wrapper">
