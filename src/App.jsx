@@ -4,6 +4,9 @@ import './App.css';
 import Herosection from './components/Herosection.jsx';
 import TopBarOptions from './components/TopBarOptions.jsx';
 import Footer from './components/footer.jsx';
+import FilterAside from './components/FilterAside.jsx';
+import ProductGrid from './components/Productgrid.jsx';
+
 
 
 function App() {
@@ -14,6 +17,10 @@ function App() {
      
       <div className='main'>
         <TopBarOptions/>
+        <div className='main-section'>
+          <FilterAside/>
+          <ProductGrid/>
+        </div>
       </div>
       <Footer/>
     </div>

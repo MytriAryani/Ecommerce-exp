@@ -1,4 +1,22 @@
-.main{
-    margin:0 auto;
-    padding:0 6rem;
-}
+
+.main {
+    margin: 0 auto;
+    padding: 0 6rem;
+  }
+  
+  /* This makes FilterAside and ProductGrid sit side-by-side */
+  .main-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  /* Optional: fix sidebar and grid widths */
+  .main-section > *:first-child {
+    flex: 0 0 250px; /* sidebar width */
+  }
+  
+  .main-section > *:last-child {
+    flex: 1; /* product grid fills remaining space */
+  }
+  
