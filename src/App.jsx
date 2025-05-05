@@ -9,19 +9,31 @@ import ProductGrid from './components/Productgrid.jsx';
 
 function App() {
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [showFilter, setShowFilter] = useState(true);
+  const [selectedSort, setSelectedSort] = useState("Recommended");
 
   return (
     <div className="App">
       <Header />
       <Herosection />
       <div className='main'>
-        <TopBarOptions />
+        <TopBarOptions
+          showFilter={showFilter}
+          toggleFilter={() => setShowFilter((prev) => !prev)}
+          selectedSort={selectedSort}
+          onSortChange={setSelectedSort}
+        />
         <div className='main-section'>
-          <FilterAside
+          {showFilter && (
+            <FilterAside
+              selectedCategories={selectedCategories}
+              onCategoryChange={setSelectedCategories}
+            />
+          )}
+          <ProductGrid
             selectedCategories={selectedCategories}
-            onCategoryChange={setSelectedCategories}
+            selectedSort={selectedSort}
           />
-          <ProductGrid selectedCategories={selectedCategories} />
         </div>
       </div>
       <Footer />

@@ -118,4 +118,7 @@
     align-items: center;
   }
   
-  
+  .full-width {
+    margin-left: 0; /* Remove margin left if any */
+    width: 100%;     /* Stretch full */
+  }
