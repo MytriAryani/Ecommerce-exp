@@ -18,7 +18,7 @@ const TopBarOptions = ({ showFilter, toggleFilter, selectedSort, onSortChange })
     setShowSortMenu((prev) => !prev);
   };
 
-  // Close sort menu when clicking outside
+  
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (sortRef.current && !sortRef.current.contains(e.target)) {

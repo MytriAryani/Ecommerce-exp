@@ -1,3 +1,4 @@
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -109,7 +110,7 @@
   }
   
   .image-wrapper {
-    position: relative; /* <- Always needed */
+    position: relative;
     width: 100%;
     aspect-ratio: 1;
     background: #f9f9f9;
@@ -119,6 +120,6 @@
   }
   
   .full-width {
-    margin-left: 0; /* Remove margin left if any */
-    width: 100%;     /* Stretch full */
+    margin-left: 0; 
+    width: 100%;    
   }

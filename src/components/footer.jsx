@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="currency-info">
             <h4>CURRENCY</h4>
-            <div class="currency-icon">
+            <div className="currency-icon">
                 <img src={us} alt="US" className="us-img" /> 
                 <img src={star} alt="star" className="star-img" /> 
                  <p>USD</p>

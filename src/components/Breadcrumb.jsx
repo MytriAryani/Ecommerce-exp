@@ -1,4 +1,4 @@
-// components/Breadcrumb.jsx
+
 import React from 'react';
 
 const Breadcrumb = () => (
