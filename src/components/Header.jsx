@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <>
-      {/* Top Notification Bar */}
+ 
       <div className="top-bar">
         <div className="top-message">
           <img src={logoIcon} alt="Icon Logo" className="icon-logo" />
@@ -28,8 +28,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Header */}
-      <header className="main-header">
+        <header className="main-header">
         <div className="header-left">
           <img src={mainLogo} alt="Main Logo" className="main-logo" />
         </div>
@@ -48,7 +47,7 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Navigation Bar */}
+      
       <nav className="nav-bar">
         <ul>
           <li className="hover-underline">SHOP</li>
