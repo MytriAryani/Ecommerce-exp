@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Signup from "./components/Signup.jsx";
 import Login from "./components/Login.jsx";
 import Home from "./components/home.jsx";
-import "./App.css"; // Import your CSS file here
+import "./App.css"; 
 
 function App() {
-  // ✅ Define this inside the component function
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
   return (
